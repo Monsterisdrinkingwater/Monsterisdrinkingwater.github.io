@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>也许是七彩霓虹灯 | Xinyuan&#39;s Blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://Monsterisdrinkingwater.github.io/favicon.ico?v=1659344822386">
+<link rel="stylesheet" href="https://Monsterisdrinkingwater.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="不知道应该从哪里出发就做一些我喜欢的东西。
+因为之前一直很喜欢creative coding 和一些shader相关的东西于是我就想做一些很炫酷的p5.js效果。
+不知道可不可以放在博客里面让大家看到。也许可以做成背景什么的。
+
+先是从最..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://Monsterisdrinkingwater.github.io">
+        <img src="https://Monsterisdrinkingwater.github.io/images/avatar.png?v=1659344822386" class="site-logo">
+        <h1 class="site-title">Xinyuan&#39;s Blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://Monsterisdrinkingwater.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">也许是七彩霓虹灯</h2>
+            <div class="post-date">2022-07-11</div>
+            
+            <div class="post-content" v-pre>
+              <p>不知道应该从哪里出发就做一些我喜欢的东西。<br>
+因为之前一直很喜欢creative coding 和一些shader相关的东西于是我就想做一些很炫酷的p5.js效果。<br>
+不知道可不可以放在博客里面让大家看到。也许可以做成背景什么的。</p>
+<!-- more -->
+<p>先是从最简单的开始，就是简单的点和线和构成。但是真的不是很好看哈哈哈。<br>
+<img src="https://Monsterisdrinkingwater.github.io/post-images/1657472255825.png" alt="" loading="lazy"><br>
+然后做了一些复杂的<br>
+<img src="https://Monsterisdrinkingwater.github.io/post-images/1657472306406.png" alt="" loading="lazy"><br>
+后来想到p5.js是可以支持webgl的然后我可以用shader去写一些很酷的特效<br>
+https://p5js.org/reference/#/p5/shader<br>
+很快我找到了reference。准备动手！</p>
+<p>找了一个reference：<br>
+https://www.youtube.com/watch?v=DkrLoRelmjw<br>
+发现其实不需要用shader<br>
+学习shader的一个问题就是p5.js支持的是webgl但是之后都会是webgpu的天下。支持webgpu的目前只有bablyon.js 和 three.js。</p>
+<p>但其实shader的核心概念还是一致的。但我觉得还是目前专注于需要什么学什么会比较高效一点。<br>
+学了个新东西noise感觉很好用，是连续的但是不规则的数字。Perlin Noise。p5.js里面会非常好用。</p>
+<p>今天是第二天了，感觉p5.js中的很多概念都和游戏引擎中的不一样。比如说画图的部分必须是在draw中执行。不然就不会出现。但是其他的一些放在draw中就会反复执行比如说random()。于是乎就感觉很混乱。可能以后做creative coding会使用godot来代替。</p>
+<p>后来发现是我搞错了因为backgound的设置是默认放在draw中的于是就会自动刷新全部的背景。我之前看到一个教程说是如果没有要draw的东西就在setup里面仿noloop()，但其实好像放在setup()里也是没有问题。<br>
+<img src="https://Monsterisdrinkingwater.github.io/post-images/1658133098469.png" alt="" loading="lazy"></p>
+<p>现在的效果是这样的，但是主要的问题是为什么有很多灯管的端点是连接在一起的。不是很能理解。<br>
+但是现在暂时不想继续做这个东西了。因为感觉呢一旦停下来了很难再去上手而且自己做的东西感觉不是很好看于是就很有挫败感。</p>
+<p>然后之前下载了《The Nature of Code》准备好好学一下的，但是我发现了我学习的目的如果消失了的化我的学习动力会很低下，就不愿再去碰这些东西了。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://Monsterisdrinkingwater.github.io/post/hi/">
+                  <h3 class="post-title">
+                    HI
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

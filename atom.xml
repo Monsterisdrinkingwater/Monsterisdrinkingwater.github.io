@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Monsterisdrinkingwater.github.io</id>
+    <title>Xinyuan&apos;s Blog</title>
+    <updated>2022-08-01T09:13:46.565Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://Monsterisdrinkingwater.github.io"/>
+    <link rel="self" href="https://Monsterisdrinkingwater.github.io/atom.xml"/>
+    <logo>https://Monsterisdrinkingwater.github.io/images/avatar.png</logo>
+    <icon>https://Monsterisdrinkingwater.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, Xinyuan&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[也许是七彩霓虹灯]]></title>
+        <id>https://Monsterisdrinkingwater.github.io/post/ye-xu-shi-qi-cai-ni-hong-deng/</id>
+        <link href="https://Monsterisdrinkingwater.github.io/post/ye-xu-shi-qi-cai-ni-hong-deng/">
+        </link>
+        <updated>2022-07-10T16:53:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>不知道应该从哪里出发就做一些我喜欢的东西。<br>
+因为之前一直很喜欢creative coding 和一些shader相关的东西于是我就想做一些很炫酷的p5.js效果。<br>
+不知道可不可以放在博客里面让大家看到。也许可以做成背景什么的。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>不知道应该从哪里出发就做一些我喜欢的东西。<br>
+因为之前一直很喜欢creative coding 和一些shader相关的东西于是我就想做一些很炫酷的p5.js效果。<br>
+不知道可不可以放在博客里面让大家看到。也许可以做成背景什么的。</p>
+<!-- more -->
+<p>先是从最简单的开始，就是简单的点和线和构成。但是真的不是很好看哈哈哈。<br>
+<img src="https://Monsterisdrinkingwater.github.io/post-images/1657472255825.png" alt="" loading="lazy"><br>
+然后做了一些复杂的<br>
+<img src="https://Monsterisdrinkingwater.github.io/post-images/1657472306406.png" alt="" loading="lazy"><br>
+后来想到p5.js是可以支持webgl的然后我可以用shader去写一些很酷的特效<br>
+https://p5js.org/reference/#/p5/shader<br>
+很快我找到了reference。准备动手！</p>
+<p>找了一个reference：<br>
+https://www.youtube.com/watch?v=DkrLoRelmjw<br>
+发现其实不需要用shader<br>
+学习shader的一个问题就是p5.js支持的是webgl但是之后都会是webgpu的天下。支持webgpu的目前只有bablyon.js 和 three.js。</p>
+<p>但其实shader的核心概念还是一致的。但我觉得还是目前专注于需要什么学什么会比较高效一点。<br>
+学了个新东西noise感觉很好用，是连续的但是不规则的数字。Perlin Noise。p5.js里面会非常好用。</p>
+<p>今天是第二天了，感觉p5.js中的很多概念都和游戏引擎中的不一样。比如说画图的部分必须是在draw中执行。不然就不会出现。但是其他的一些放在draw中就会反复执行比如说random()。于是乎就感觉很混乱。可能以后做creative coding会使用godot来代替。</p>
+<p>后来发现是我搞错了因为backgound的设置是默认放在draw中的于是就会自动刷新全部的背景。我之前看到一个教程说是如果没有要draw的东西就在setup里面仿noloop()，但其实好像放在setup()里也是没有问题。<br>
+<img src="https://Monsterisdrinkingwater.github.io/post-images/1658133098469.png" alt="" loading="lazy"></p>
+<p>现在的效果是这样的，但是主要的问题是为什么有很多灯管的端点是连接在一起的。不是很能理解。<br>
+但是现在暂时不想继续做这个东西了。因为感觉呢一旦停下来了很难再去上手而且自己做的东西感觉不是很好看于是就很有挫败感。</p>
+<p>然后之前下载了《The Nature of Code》准备好好学一下的，但是我发现了我学习的目的如果消失了的化我的学习动力会很低下，就不愿再去碰这些东西了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HI]]></title>
+        <id>https://Monsterisdrinkingwater.github.io/post/hi/</id>
+        <link href="https://Monsterisdrinkingwater.github.io/post/hi/">
+        </link>
+        <updated>2022-07-09T15:14:12.000Z</updated>
+        <content type="html"><![CDATA[<p>你好</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://Monsterisdrinkingwater.github.io/post/hello-gridea/</id>
+        <link href="https://Monsterisdrinkingwater.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
